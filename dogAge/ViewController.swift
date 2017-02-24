@@ -14,6 +14,16 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
     }
+    
+    
+    @IBOutlet weak var fieldAgeDog: UITextField!
+    @IBOutlet weak var resultLabel: UILabel!
+    
+    @IBAction func calcAge(_ sender: Any) {
+        var ageDog = Int(fieldAgeDog.text!)!
+        ageDog = ageDog * 7
+        resultLabel.text = String(ageDog)
+    }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
